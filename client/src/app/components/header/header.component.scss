@@ -1,0 +1,31 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: inherit;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+
+  button {
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+}
+
+body.dark .app-header button {
+  border-color: #555;
+  background-color: #2e2e2e;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+<h2>Edit Note</h2>
+<form (ngSubmit)="saveNote()">
+  <label>Title:</label>
+  <input [(ngModel)]="note.title" name="title" required><br><br>
+
+  <label>Content:</label><br>
+  <textarea [(ngModel)]="note.content" name="content" rows="6" required></textarea><br><br>
+
+  <label>Tags:</label>
+  <input [(ngModel)]="note.tags" name="tags"><br><br>
+
+  <button type="submit">Save Changes</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</form>

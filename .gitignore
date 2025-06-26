@@ -1,0 +1,14 @@
+# Node backend
+server/node_modules/
+server/*.db
+server/*.log
+
+# Angular frontend
+client/node_modules/
+client/dist/
+
+# Logs
+*.log
+
+# Environment files (if any)
+.env

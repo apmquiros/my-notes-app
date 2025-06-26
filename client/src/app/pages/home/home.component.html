@@ -1,0 +1,46 @@
+<div class="notes-container">
+  <!-- Create Button -->
+  <div style="margin-bottom: 1rem;">
+    <a routerLink="/create">
+      <button>Create New Note</button>
+    </a>
+  </div>
+
+  <!-- Search Bar -->
+  <input
+    type="text"
+    placeholder="Search note contents..."
+    [(ngModel)]="searchTerm"
+    (input)="applyFilters()"
+    style="margin-bottom: 1rem; width: 100%; padding: 0.5rem;"
+  />
+
+  <!-- Tag Filters -->
+  <div class="filter-bar" style="margin-bottom: 1rem;">
+    <span *ngFor="let tag of tags">
+      <button
+        (click)="filterByTag(tag)"
+        [disabled]="selectedTag === tag"
+      >{{ tag }}</button>
+    </span>
+    <button *ngIf="selectedTag" (click)="clearTagFilter()">Clear Filter</button>
+  </div>
+
+  <div *ngIf="searchTerm || selectedTag" style="margin-bottom: 1rem;">
+    <button (click)="resetAll()">Reset All Filters</button>
+  </div>
+
+  <!-- Note List -->
+  <div *ngIf="filteredNotes.length === 0">No notes found.</div>
+
+  <div *ngFor="let note of filteredNotes" class="note-card">
+    <h3 [innerHTML]="highlightMatch(note.title)"></h3>
+    <p [innerHTML]="highlightMatch(note.content)"></p>
+    <small>Tags: {{ note.tags }}</small><br>
+    <small>Updated: {{ note.updated_at | date:'short' }}</small><br>
+
+    <a [routerLink]="['/edit', note.id]"><button>Edit</button></a>
+    <button (click)="deleteNote(note.id!)">Delete</button>
+  </div>
+  
+</div>

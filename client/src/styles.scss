@@ -1,0 +1,85 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ddd;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark .note-card {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark input[type="text"] {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+body.dark button {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark mark {
+  background-color: #d1b200;
+}
+
+body.dark form input,
+body.dark form textarea {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+body.dark form button {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark form button:hover {
+  background-color: #333;
+}
