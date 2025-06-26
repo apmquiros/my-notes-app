@@ -57,7 +57,8 @@ ng serve
 
 Frontend runs at: http://localhost:4200
 ```
-## 🖼️ Screenshots
+
+---
 
 ## 🛠️ Future Enhancements
  - Markdown support
@@ -65,8 +66,12 @@ Frontend runs at: http://localhost:4200
  - Auth (Login/Register)
  - Sync with cloud storage (optional)
 
+---
+
 ## 📄 License
 MIT — feel free to use and adapt this project.
+
+---
 
 ## 🙌 Credits
 Made by apmquiros
