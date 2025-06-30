@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://YOUR-BACKEND-URL'
+  apiBaseUrl: 'https://my-notes-app.up.railway.app'
 };
