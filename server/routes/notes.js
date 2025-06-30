@@ -17,6 +17,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const pool = req.pool;
   const { title, content, tags } = req.body;
+
+  if (!title || typeof title !== 'string') {
+    return res.status(400).json({ error: 'Invalid title' });
+  }
+
   try {
     const result = await pool.query(
       `INSERT INTO notes (title, content, tags) VALUES ($1, $2, $3) RETURNING *`,
@@ -34,6 +39,11 @@ router.put('/:id', async (req, res) => {
   const pool = req.pool;
   const { id } = req.params;
   const { title, content, tags } = req.body;
+
+  if (!title || typeof title !== 'string') {
+    return res.status(400).json({ error: 'Invalid title' });
+  }
+
   try {
     const result = await pool.query(
       `UPDATE notes SET title = $1, content = $2, tags = $3, updated_at = CURRENT_TIMESTAMP WHERE id = $4 RETURNING *`,
