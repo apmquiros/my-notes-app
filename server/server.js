@@ -17,7 +17,7 @@ app.use(cors({
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
       const allowedOrigins = [
-        'https://yourusername.github.io',
+        'https://apmquiros.github.io',
         'http://localhost:4200'
       ];
       if (allowedOrigins.includes(origin)) {
