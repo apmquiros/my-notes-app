@@ -12,7 +12,7 @@ A full-stack notes app inspired by Notion — featuring a clean UI, markdown-sty
 ---
 
 ## 🩺 API Health
-[Check Health](https://your-backend.up.railway.app/api/health)
+[Check Health](https://my-notes-app.up.railway.app/api/health)
 
 ---
 
