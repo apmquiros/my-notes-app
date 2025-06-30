@@ -4,6 +4,13 @@ A full-stack notes app inspired by Notion — featuring a clean UI, markdown-sty
 
 ---
 
+## 🚀 Live Demo
+
+**Frontend:** [View on GitHub Pages](https://apmquiros.github.io/my-notes-app/)  
+**Backend API:** [View API Root](https://my-notes-app.up.railway.app/api/notes)
+
+---
+
 ## 🚀 Features
 
 - ✅ Create, edit, and delete notes
