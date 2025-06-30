@@ -1,6 +1,5 @@
 # Node backend
 server/node_modules/
-server/*.db
 server/*.log
 
 # Angular frontend
